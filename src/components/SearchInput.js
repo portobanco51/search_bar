@@ -6,7 +6,7 @@ export class SearchInput extends React.Component {
 
     onFormSubmit = (e) => {
         e.preventDefault()
-        console.log(this.state.entry)
+        this.props.onSearchSubmit(this.state.entry)
     }
 
     render() {
