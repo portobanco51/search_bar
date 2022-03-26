@@ -1,9 +1,46 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cbdcf0;
+}
+
+#app {
+    height: auto;
 }
 
 .label {
     margin: auto;
     padding: 0.9rem;
+}
+
+.banner {
+    text-align: center;
+    margin: 1rem;
+}
+
+.image {
+    max-width: 30%;
+    box-shadow: 0px 2px 1rem 0px rgba(0, 0, 0, 0.4);
+    height: fit-content;
+    margin-inline: 1rem;
+    margin-block: 1rem;
+    transition: all 0.2s ease-in-out;
+    transform-origin: center;
+}
+
+.image:hover {
+    transform: scale(1.8);
+}
+
+.image-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+#bar {
+    margin-top: 1rem;
 }

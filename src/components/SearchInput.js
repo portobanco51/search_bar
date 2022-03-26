@@ -6,12 +6,12 @@ export class SearchInput extends React.Component {
 
     onFormSubmit = (e) => {
         e.preventDefault()
-        this.props.onSearchSubmit(this.state.entry)
+        this.props.onSearchInput(this.state.entry)
     }
 
     render() {
         return (
-            <div className='ui segment'>
+            <div className='ui segment' id='bar'>
                 <form className='ui form' onSubmit={this.onFormSubmit}>
                     <div className='field'>
                         <div className='ui massive icon input'>
