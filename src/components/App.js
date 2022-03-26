@@ -2,6 +2,7 @@ import React from 'react'
 import axios from "axios";
 import { SearchInput } from './SearchInput'
 import { ImageList } from "./ImageList";
+import { Header } from "./Header";
 
 export class App extends React.Component {
 
@@ -17,13 +18,18 @@ export class App extends React.Component {
 
     render() {
         return (
-            <div className='ui container'>
-                <SearchInput onSearchInput={this.onSearchInput} />
-                <div className='main'>
-                    <h3 className='banner'> {this.state.imageList.length} images found</h3>
+            <>
+                <Header />
+                <div className='ui container'>
+                    <SearchInput onSearchInput={this.onSearchInput} />
+                    <div className='main'>
+                        <h3 className='banner'> {this.state.imageList.length} images found</h3>
+                    </div>
+                </div>
+                <div className='list'>
                     <ImageList images={this.state.imageList} />
                 </div>
-            </div>
+            </>
         )
     }
 }
